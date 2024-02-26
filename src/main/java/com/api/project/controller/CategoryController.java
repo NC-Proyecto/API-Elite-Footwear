@@ -20,8 +20,8 @@ public class CategoryController {
     @GetMapping
     public ResponseEntity<List<Category>> getCategories() {
         try {
-            List<Category> vacancies = categoryService.getCategories();
-            return ResponseEntity.ok(vacancies);
+            List<Category> categories = categoryService.getCategories();
+            return ResponseEntity.ok(categories);
         } catch (Exception e) {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
