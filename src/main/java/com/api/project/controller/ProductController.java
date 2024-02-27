@@ -19,8 +19,8 @@ public class ProductController {
     @GetMapping
     public ResponseEntity<List<Product>> getProducts() {
         try {
-            List<Product> vacancies = productService.getProducts();
-            return ResponseEntity.ok(vacancies);
+            List<Product> products = productService.getProducts();
+            return ResponseEntity.ok(products);
         } catch (Exception e) {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -32,30 +32,30 @@ public class ProductController {
 
     try {
         productService.saveProduct(product);
-        return ResponseEntity.ok("Vacante creada exitosamente");
+        return ResponseEntity.ok("Producto creado exitosamente");
     } catch (Exception e) {
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body("Error al crear la vacante: " + e.getMessage());
+                .body("Error al crear el producto: " + e.getMessage());
     }
 }
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Long id) {
         try {
             productService.deleteProduct(id);
-            return ResponseEntity.ok("Vacante eliminada exitosamente");
+            return ResponseEntity.ok("Producto eliminado exitosamente");
         } catch (Exception e) {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error al eliminar la vacante: " + e.getMessage());
+                    .body("Error al eliminar el producto: " + e.getMessage());
         }
     }
     @PutMapping
     public ResponseEntity<Product> editVacancy(@RequestBody Product product) {
         try {
             productService.editProduct(product);
-            Product vacanteEditada = productService.findProduct(product.getId());
-            return ResponseEntity.ok(vacanteEditada);
+            Product editedProduct = productService.findProduct(product.getId());
+            return ResponseEntity.ok(editedProduct);
         } catch (Exception e) {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
