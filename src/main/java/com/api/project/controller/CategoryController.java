@@ -33,30 +33,30 @@ public class CategoryController {
 
         try {
             categoryService.saveCategory(category);
-            return ResponseEntity.ok("Vacante creada exitosamente");
+            return ResponseEntity.ok("Categoria creada exitosamente");
         } catch (Exception e) {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error al crear la vacante: " + e.getMessage());
+                    .body("Error al crear la categoria: " + e.getMessage());
         }
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCategory(@PathVariable Long id) {
         try {
             categoryService.deleteCategory(id);
-            return ResponseEntity.ok("Vacante eliminada exitosamente");
+            return ResponseEntity.ok("Categoria eliminada exitosamente");
         } catch (Exception e) {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error al eliminar la vacante: " + e.getMessage());
+                    .body("Error al eliminar la categoria: " + e.getMessage());
         }
     }
     @PutMapping
     public ResponseEntity<Category> editCategory(@RequestBody Category category) {
         try {
             categoryService.editCategory(category);
-            Category vacanteEditada = categoryService.findCategory(category.getId());
-            return ResponseEntity.ok(vacanteEditada);
+            Category editedCategory = categoryService.findCategory(category.getId());
+            return ResponseEntity.ok(editedCategory);
         } catch (Exception e) {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)

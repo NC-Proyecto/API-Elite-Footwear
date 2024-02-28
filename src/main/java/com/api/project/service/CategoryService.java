@@ -19,8 +19,8 @@ public class CategoryService implements ICategoryService {
 
     @Override
     public Category findCategory(Long id) {
-        Optional<Category> optionalProduct = categoryRepository.findById(id);
-        return optionalProduct.orElse(null);
+        Optional<Category> optionalCategory = categoryRepository.findById(id);
+        return optionalCategory.orElse(null);
     }
 
     @Override
