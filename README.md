@@ -48,7 +48,7 @@ A product has a category, and a category can be in multiple products
 
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
-| Se requiere un objeto para crear un registro | **Objeto por Body**        |
+| An object is required to create a record. | **Objeto por Body**        |
 
 #### Delete a category
 
@@ -58,7 +58,7 @@ A product has a category, and a category can be in multiple products
 
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
-| Se requiere un id para eliminar un registro | **Id de tipo Long**        |
+| An ID is required to delete a record | **Id de tipo Long**        |
 
 
 #### Update a category
@@ -68,7 +68,7 @@ A product has a category, and a category can be in multiple products
 ```
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
-| Se edita un registro ya creado | **Objeto por Body**        |
+| A previously created record is edited | **Objeto por Body**        |
 
 
 #### List of products
@@ -85,7 +85,7 @@ A product has a category, and a category can be in multiple products
 
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
-| Se requiere un objeto para crear un registro | **Objeto por Body**        |
+| An object is required to create a record | **Objeto por Body**        |
 
 #### Delete a product
 
@@ -95,7 +95,7 @@ A product has a category, and a category can be in multiple products
 
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
-| Se requiere un id para eliminar un registro | **Id de tipo Long**        |
+| An ID is required to delete a record | **Id de tipo Long**        |
 
 
 #### Update a product
@@ -105,7 +105,7 @@ A product has a category, and a category can be in multiple products
 ```
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
-| Se edita un registro ya creado | **Objeto por Body**        |
+| A previously created record is edited | **Objeto por Body**        |
 
 
 
