@@ -34,26 +34,26 @@ A product has a category, and a category can be in multiple products
 ## Endpoints
 
 
-#### Lista de personas
+#### List of categories
 
 ```http
-  GET localhost:8080/personas/traer
+  GET localhost:8080/api/category
 ```
 
-#### Crear una persona
+#### Create a category
 
 ```http
-  POST localhost:8080/persona/crear
+  POST localhost:8080/api/category
 ```
 
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
 | Se requiere un objeto para crear un registro | **Objeto por Body**        |
 
-#### Eliminar una persona
+#### Delete a category
 
 ```http
-  DELETE localhost:8080/persona/eliminar/{id}
+  DELETE localhost:8080/api/category/{id}
 ```
 
 | Descripcion              | Requerido                      |
@@ -61,33 +61,33 @@ A product has a category, and a category can be in multiple products
 | Se requiere un id para eliminar un registro | **Id de tipo Long**        |
 
 
-#### Actualizar una persona
+#### Update a category
 
 ```http
-  PUT  localhost:8080/persona/editar
+  PUT  localhost:8080/api/category
 ```
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
 | Se edita un registro ya creado | **Objeto por Body**        |
 
 
-#### Lista de Mascotas
+#### List of products
 
 ```http
-  GET localhost:8080/mascotas/traer
+  GET localhost:8080/api/product
 ```
 
-#### Crear una mascota
+#### Create a product
 
 ```http
-  POST localhost:8080/mascota/crear
+  POST localhost:8080/api/product
 ```
 
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
 | Se requiere un objeto para crear un registro | **Objeto por Body**        |
 
-#### Eliminar una mascota
+#### Delete a product
 
 ```http
   DELETE localhost:8080/mascota/eliminar/{id}
@@ -98,10 +98,10 @@ A product has a category, and a category can be in multiple products
 | Se requiere un id para eliminar un registro | **Id de tipo Long**        |
 
 
-#### Actualizar una mascota
+#### Update a product
 
 ```http
-  PUT  localhost:8080/mascota/editar
+  PUT  localhost:8080/api/product
 ```
 | Descripcion              | Requerido                      |
 | :--------------------- | :----------------------------- |
