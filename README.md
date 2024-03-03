@@ -14,31 +14,22 @@
 
 
 
-## Modelado
+## Models
 
- Las siguientes clases son los modelos:
-
-* Persona
-* Mascota
-
-### Persona
+### Product
 * Long id
-* String nombre
-* String apellido
-* int edad
-* List<Mascota> listaMascotas
-  
-### Mascota
+* String name
+* Category category
+* String price
+* String image
+
+### Category
 * Long id
-* String nombre
-* String especie
-* String raza
-* String color
+* String name
+* List<Product>products;
 
-
-### Relacion
-#### OneToMany
-En donde una persona puede tener varias mascotas y varias mascotas pueden pertenecer a una persona.
+#### Relation
+A product has a category, and a category can be in multiple products
 
 ## Endpoints
 
