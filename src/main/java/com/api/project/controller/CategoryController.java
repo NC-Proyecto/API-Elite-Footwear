@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api/categories")
+@RequestMapping("/api/category")
 public class CategoryController {
     @Autowired
     ICategoryService categoryService;

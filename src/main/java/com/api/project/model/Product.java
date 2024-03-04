@@ -14,9 +14,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
     private String price;
     private String image;
+
 }
