@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api/products")
+@RequestMapping("/api/product")
 public class ProductController {
     @Autowired
     IProductService productService;
